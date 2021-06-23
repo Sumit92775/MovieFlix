@@ -1,0 +1,94 @@
+/* *{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+} */
+
+.selected_movie_container{
+    height: 100vh;
+    width: 100%;
+    background-image: url("https://wallpaperaccess.com/full/173798.jpg");
+    background-size: cover;
+    /* background-color: chartreuse; */
+}
+
+.selected_movie_container_i_m{
+    height: 80vh;
+    width: 100%;
+    /* background-color: turquoise; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    
+    
+}
+
+.shadow_effect{
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, .6) 
+}
+.selected_movie_info{
+    height: 100%;
+    width: 40%;
+    /* background-color: tomato; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    padding: 10px;
+    border-radius: 20px;
+
+    /* margin-left: 10px; */
+}
+
+iframe{
+    height: 100%;
+    width: 60%;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+}
+.selected_movie_info h1{
+    font-size: 70px;
+    color: gray;
+}
+h3{
+    font-size: 20px;
+    color: white;
+}
+
+.description{
+    padding: 10px;
+    /* background-color: chocolate; */
+    border-radius: 20px;
+}
+
+.release{
+    background-color: crimson;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.vote_rating{
+    height: 50px;
+    width: 80px;
+    background-color: crimson;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.vote_rating img{
+    height: 50px;
+    width: 80px;
+    background-color: crimson;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

@@ -1,0 +1,70 @@
+/* *{
+    box-sizing: border-box;
+    padding: 0px;
+    margin-top: 20px;
+} */
+
+
+
+.moviePage_container{
+    height: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    /* position: relative; */
+    grid-gap: 10px;
+    margin-top: 100px;
+    position: relative;
+}
+
+.trending_movie_container{
+    height: 450px;
+    width: 100%;
+    /* background-color: blueviolet; */
+    /* justify-content: center; */
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    overflow-x: scroll;
+    padding-left: 100px;
+    padding-bottom: 100px;
+    padding-right: 100px;
+    left: 10px;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.trending_movie_tag{
+    height: 50px;
+    width: 200px;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 8px;
+    border-radius: 40px;
+    position: absolute;
+    top: -30px;
+    left: 100px;
+}
+
+.trending_movie_icon{
+    height: 100px;
+    width: 45px;
+    color: teal;
+
+    background-color: burlywood;
+}
+.trending_movie_text{
+    height: 100%;
+    width: 70%;
+    /* background-color: rgb(76, 172, 76); */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

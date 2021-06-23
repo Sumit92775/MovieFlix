@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    /* height: 100vh; */
+    /* background-image: url("https://cdn.wallpapersafari.com/14/70/XbCinS.jpg"); */
+}
+
+.home_container{
+    height: 100vh;
+    display: block;
+    background-image: url("https://cdn.wallpapersafari.com/40/71/eO6rsl.jpg");
+    background-size: cover;
+}
