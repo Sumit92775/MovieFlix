@@ -35,7 +35,7 @@ class Header extends Component {
             </div>
             <div className="header_container_right">
                 
-                {window.location.href === "http://localhost:3000/home" ? 
+                {window.location.href === "http://mflicks.herokuapp.com/home" ? 
                 
                 // <input className="header_container_right_search" placeholder="search" onKeyPress={(text)=>this.handleSearch(text)}/>
                     
