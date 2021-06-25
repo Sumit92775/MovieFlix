@@ -1,0 +1,73 @@
+/* *{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+} */
+
+.home_container{
+    height: 100vh;
+    width: 100px;
+    display: block;
+    background-image: url("https://cdn.wallpapersafari.com/40/71/eO6rsl.jpg");
+    background-size: cover;
+}
+
+
+
+/* *{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    /* overflow: scroll; */
+/* } */ */
+
+.movie_container{
+    height: 250px;
+    width: 180px;
+    background-color: blueviolet;
+    border-radius: 10px;
+    /* overflow: scroll; */
+    transition: 1s transform;
+}
+
+.movie_container:hover{
+    transform: scale(1.1);
+}
+
+.movie_poster_div{
+    height: 100%;
+    width: 200px;
+    /* background-color: burlywood; */
+}
+
+.movie_poster_div img{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.movie_info_div{
+    height : 50%;
+    width: 200px;
+    padding: 5px;
+    background-color: #141f27;
+    border-radius: 0px 0px 8px 8px;
+    font-family: 'Baloo Tammudu 2', cursive;
+}
+
+.movie_info_div_title{
+    width: 100%;
+    max-height: 35px;
+    overflow: hidden;
+}
+.movie_info_div_release_date{
+    font-size: 13px;
+    color: white;
+}
+
+
+.delete_favourite_movie{
+    height: 50px;
+    width: 50px;
+}

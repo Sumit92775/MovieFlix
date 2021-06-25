@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.Splash_screen_container{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+}
+
+.netflix_lottie{
+    /* transition: 3ms scaling; */
+    transform: rotate(20deg);
+}
+
+@keyframes scaling {
+    50%{
+        transform: scale(1.2);
+    }100%{
+        transform: scale(2);
+    }
+}

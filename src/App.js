@@ -147,15 +147,18 @@ import Dashboard from './practiceComponents/Pages/Dashboard/dashboard.jsx';
 import Home from './practiceComponents/Pages/Home/Home.jsx'
 import {Route} from 'react-router-dom';
 import MoviePage from "./practiceComponents/Pages/MoviePage/MoviePage.jsx";
+import Favourite_Movies from "./practiceComponents/Pages/Favourite_Movies/favourite.jsx";
+import Splash_Screen from "./practiceComponents/Pages/Splash Screen/Splash_screen.jsx";
 
 
 function App()  {
     return (  
       <div className="App">
-        <Route exact path="/" component={Dashboard}/>
+        <Route exact path="/" component={Splash_Screen}/>
+        <Route path="/dashboard" component={Dashboard}></Route>
         <Route path="/home" component={Home}/>
         <Route path="/moviepage" component={MoviePage}/>
-
+        <Route path="/favourite-movies" component={Favourite_Movies}/>
       </div>
     );
 }

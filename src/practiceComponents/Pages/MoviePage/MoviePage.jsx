@@ -3,6 +3,7 @@ import './../MoviePage/MoviePage.css';
 import Header from './../Header/Header.jsx'
 import axios from 'axios';
 import cheerio from 'cheerio';
+import { IMAGE_URL } from '../../../API/secrets';
 
 
 
@@ -95,15 +96,49 @@ class MoviePage extends Component {
         //// Fetch details ***************************************************
     }
 
+    setLikes = (PosterUrl,MovieTitle,MovieUrl,WhenWatched) => {
+
+        if(window.localStorage.getItem("fMovies") != null && window.localStorage.getItem("fMovies") != undefined){
+
+            let fMoviesArray = window.localStorage.getItem("fMovies");
+            fMoviesArray.push({"moviePoster" : PosterUrl,"movieTitle" : MovieTitle,"movieUrl" : MovieUrl ,"whenWatched" : WhenWatched});
+            window.localStorage.setItem("fMovies",fMoviesArray);
+        }else{
+            window.localStorage.setItem("fMovies" , [{"moviePoster" : PosterUrl,"movieTitle" : MovieTitle,"movieUrl" : MovieUrl ,"whenWatched" : WhenWatched}])
+        }
+
+
+    }
+
+
+    // setLikeFunction = (PosterUrl,MovieTitle,MovieUrl,WhenWatched) =>{
+
+       
+
+    // }
+
 
     render() { 
+        let hMHref = this.state.hMovieHref;
+        let hMPoster = this.state.hMoviePoster;
+        let hMTitle =  this.state.hMovietitle;
+
+        let mPoster = IMAGE_URL+this.props.location.state.singleMovieArrayObj.backdrop_path;
+        let mHref = this.state.movieUrl;
+        let mTitle = this.state.splitmovie;
+        let date = new Date().getDate();
+        let month = new Date().getMonth();
+        let second = new Date().getSeconds();
+        let lastWatched = `${date}-${month}-${second}`;
+
+        let mkArrayObj = {"moviePoster" : hMPoster.length > 0 ? hMPoster : mPoster ,"movieTitle" : hMTitle.length > 0 ? hMTitle : mTitle,"movieUrl" : hMHref.length > 0 ? hMHref : mHref,"whenWatched" : lastWatched};
         return ( 
 
             this.props.location.state.mode != "hidden" ? 
             
             <div class="selected_movie_container">
                 <div className="shadow_effect">
-                    <Header></Header>
+                    <Header setLikes = {mkArrayObj}></Header>
                     <div class="selected_movie_container_i_m">
                         <div class="selected_movie_info">
                             <h1 class="title">{this.props.location.state.singleMovieArrayObj.title}</h1>
@@ -122,7 +157,7 @@ class MoviePage extends Component {
 
             <div class="selected_movie_container">
             <div className="shadow_effect">
-                <Header></Header>
+                <Header setLikes = {mkArrayObj}></Header>
                 <div class="selected_movie_container_i_m">
                     <div class="selected_movie_info">
                         <h1 class="title">{this.state.hMovietitle}</h1>
